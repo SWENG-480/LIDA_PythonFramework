@@ -1,10 +1,15 @@
+#LIDA Cognitive Framework
+#Pennsylvania State University, Course : SWENG480
+#Authors: Katie Killian, Brian Wachira, and Nicole Vadillo
+
 import gymnasium as gym
+import pygame
 
 #Creating the Frozen Lake Environment
 env = gym.make(
     'FrozenLake-v1',
-    desc= ["SFFF", "FHFH", "FFFH", "HFFG"],  #Using a custom 4x4 map
-    is_slippery=True)     #Specifying true, will move in intended direction with the probability of 1/3
+    is_slippery=True,
+    render_mode='human')     #Specifying true, will move in intended direction with the probability of 1/3
 
 #Reseting the environment to start a new episode
 #State: complete description of the environment at a given time
